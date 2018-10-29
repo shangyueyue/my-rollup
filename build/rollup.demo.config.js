@@ -3,11 +3,18 @@ import getPlugin from './get-plugin';
 
 export default {
   input: 'src/demo/main.js',
-  output: {
-    file: 'public/static/bundle.js',
-    format: 'iife',
-    sourcemap: config.dev
-  },
+  output: [
+    {
+      file: 'public/static/bundle.js',
+      format: 'es',
+      sourcemap: config.dev
+    },
+    {
+      file: 'public/static/bundle.min.js',
+      format: 'iife',
+      sourcemap: false
+    }
+  ],
   plugins: [
     getPlugin('progress', {
       clear: false

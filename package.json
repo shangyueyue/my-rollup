@@ -5,7 +5,7 @@
   "main": "lib/index.min.js",
   "module": "es/index.js",
   "scripts": {
-    "dev": "./node_modules/.bin/rollup -c build/rollup.demo.config.js --watch",
+    "dev": "rollup -c build/rollup.demo.config.js --watch",
     "demo": "./node_modules/.bin/rimraf public/static && NODE_ENV=production ./node_modules/.bin/rollup -c build/rollup.demo.config.js",
     "lib": "./node_modules/.bin/rimraf lib && NODE_ENV=production ./node_modules/.bin/rollup -c build/rollup.lib.config.js",
     "v": "node build/update-version.js",
@@ -48,7 +48,7 @@
     "rollup-plugin-commonjs": "^8.2.6",
     "rollup-plugin-eslint": "^4.0.0",
     "rollup-plugin-filesize": "^1.5.0",
-    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-json": "^3.0.0",
     "rollup-plugin-livereload": "^0.6.0",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-postcss": "^0.5.5",

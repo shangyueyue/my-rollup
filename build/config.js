@@ -12,6 +12,7 @@ export default {
     port: 5000
   },
   alias: {
+     resolve: ['.jsx', '.js','css'],
     '@es': path.resolve('es'),
     '@styles': path.resolve('src/styles')
   },
